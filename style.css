@@ -1,0 +1,60 @@
+:root {
+    --clr-dark: #0f172a;
+    --clr-light: #f1f5f9;
+    --clr-accent: #e11d48;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 5em 0 0 0;
+    padding: 0;
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    overflow-y: hidden;
+}
+
+.container {
+    width: min(50vw, 50vh);
+    /* Ensures square aspect ratio */
+    height: min(50vw, 50vh);
+    ;
+    /* width: 80%; */
+    margin: 0 auto;
+    border: 10px solid var(--clr-dark);
+    /* height: 70vh; */
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-areas:
+        "1 2 3 4"
+        "5 6 7 8"
+        "9 10 11 12"
+        "13 14 15 16";
+}
+
+.item {
+    padding: 0.5em;
+    background-color: #fb7185;
+    font-weight: 700;
+    color: var(--clr-light);
+    border: 10px solid var(--clr-accent);
+    background-image: url(images/CardBackground.jpg);
+    background-repeat: no-repeat;
+
+}
+
+#wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
