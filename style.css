@@ -22,16 +22,13 @@ body {
 }
 
 .container {
-    width: min(50vw, 50vh);
-    /* Ensures square aspect ratio */
-    height: min(50vw, 50vh);
-    ;
-    /* width: 80%; */
+
+    width: clamp(0px, 90vw, 850px);
+    height: clamp(0px, 70%, 600px);
     margin: 0 auto;
     border: 10px solid var(--clr-dark);
-    /* height: 70vh; */
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, minmax(120px, 150px));
     grid-template-columns: repeat(auto-fit, 1fr);
     grid-template-areas:
         "1 2 3 4"
@@ -47,7 +44,12 @@ body {
     color: var(--clr-light);
     border: 10px solid var(--clr-accent);
     background-image: url(images/CardBackground.jpg);
+
+
+    /* Ensures the full image fits inside */
     background-repeat: no-repeat;
+    /* Prevents tiling */
+    background-position: center;
 
 }
 
